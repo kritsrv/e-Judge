@@ -1,0 +1,15 @@
+""" e-Judge """
+def main():
+    """ Lane """
+    direct = input()
+    lane = 1
+    while direct != 'P':
+        if direct == 'L':
+            if lane != 1:
+                lane -= 1
+        if direct == 'R':
+            if lane != 4:
+                lane += 1
+        direct = input()
+    print(lane)
+main()
