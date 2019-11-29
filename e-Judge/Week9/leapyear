@@ -1,0 +1,14 @@
+""" e-Judge """
+def main():
+    """ Leap Year """
+    year = int(input())
+    if year <= 0:
+        print('This year does not exist.')
+    else:
+        if (year % 4 == 0) and (year % 100 != 0):
+            print('%d is leap year.' % year)
+        elif year % 400 == 0:
+            print('%d is leap year.' % year)
+        else:
+            print('%d is not leap year.' % year)
+main()
