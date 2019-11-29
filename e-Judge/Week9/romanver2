@@ -1,0 +1,14 @@
+""" e-Judge """
+def main():
+    """ Roman """
+    roman = input()
+    value = 0
+    number = {'I':1, 'V': 5, 'X': 10, \
+        'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    for i in range(len(roman_text)-1):
+        if number[roman[i+1]] > number[roman[i]]:
+            value += number[roman[i+1]] - 2 * number[roman[i]]
+        else:
+            value += number[roman[i]]
+    print(value) 
+main()
