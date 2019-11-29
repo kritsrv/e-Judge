@@ -1,0 +1,20 @@
+""" e-Judge """
+def main():
+    """ Set """
+    str_a = input().replace('{', '').replace('}', '').replace(',', ' ')
+    str_b = input().replace('{', '').replace('}', '').replace(',', ' ')
+    set_a = set()
+    set_b = set()
+    for i in str_a.split():
+        if i.isnumeric():
+            set_a.add(int(i))
+        else:
+            set_a.add(i)
+    for i in str_b.split():
+        if i.isnumeric():
+            set_b.add(int(i))
+        else:
+            set_b.add(i)
+    print(set_a | set_b)
+    print(set_a & set_b)
+main()
