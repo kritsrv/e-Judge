@@ -1,0 +1,18 @@
+""" e-Judge """
+def main():
+    """ 7 Segment """
+    lst_power = []
+    for _ in range(7):
+        switch = input()
+        if switch == 'on':
+            lst_power.append(1)
+        else:
+            lst_power.append(0)
+    form = "1111112\n6     2\n6     2\n6     2\n5777773\n5     3\n5     3\n4444443"
+    for i in range(7):
+        if lst_power[i] == 1:
+            form = form.replace(str(i+1), "*")
+        else:
+            form = form.replace(str(i+1), " ")
+    print(form)
+main()
