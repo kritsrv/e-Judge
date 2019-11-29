@@ -1,0 +1,12 @@
+""" e-Judge """
+def main():
+    """ Binary Flip """
+    binary = input()
+    flip = ""
+    for i in binary:
+        if i == '0':
+            flip += '1'
+        else:
+            flip += '0'
+    print(flip)
+main()
