@@ -1,0 +1,12 @@
+""" e-Judge """
+def main():
+    """ Sandglass """
+    size = int(input())
+    if size % 2 == 0:
+        print('Errrrrrrrrrrrrr')
+    else:
+        for i in range(size//2+1):
+            print(" " * i + "*" * (size-(2*i)))
+        for j in range(size//2, 0, -1):
+            print(" " * (j-1) + "*" * (size-(2*(j-1))))
+main()
