@@ -1,0 +1,13 @@
+""" e-Judge """
+def main():
+    """ Sequence 5 """
+    size = int(input())
+    for i in range(size):
+        for j in range(size):
+            if (i*j) >= 10:
+                result = (i*j) % 10
+                print(result, end=" ")
+            else:
+                print(i*j, end=" ")
+        print()
+main()
