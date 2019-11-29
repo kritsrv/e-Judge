@@ -1,0 +1,20 @@
+""" e-Judge """
+def main():
+    """ Pager """
+    text = input()
+    print("Text's length is : \"%d\"" % len(text))
+    price = cashier(len(text))
+    print("Total price is   : %.2f Bath\\.-"%price)
+ 
+def cashier(length):
+    """ Calculate Cost """
+    cost = 0
+    cost += (length // 20) * 18.5
+    length %= 20
+    cost += (length // 8) * 6.5
+    length %= 8
+    cost += (length // 3) * 3
+    length %= 3
+    cost += length * 1.5
+    return cost
+main()
