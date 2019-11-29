@@ -1,0 +1,29 @@
+""" e-Judge """
+def main():
+    """ Admission """
+    score = int(input())
+    choice_1 = input()
+    choice_2 = input()
+    choice_3 = input()
+    choice_4 = input()
+    if compare(choice_1, score):
+        print(choice_1)
+    elif compare(choice_2, score):
+        print(choice_2)
+    elif compare(choice_3, score):
+        print(choice_3)
+    elif compare(choice_4, score):
+        print(choice_4)
+    else:
+        print("None")
+ 
+def compare(name, score):
+    """ What University? """
+    if ("A" in name and score >= 20000) or ("B" in name and score >= 17500) or\
+    ("C" in name and score >= 18000) or ("D" in name and score >= 28250) or\
+    ("E" in name and score >= 27000) or ("F" in name and score >= 25000) or\
+    ("G" in name and score >= 21750) or ("H" in name and score >= 22000):
+        return True
+    else:
+        return False
+main()
