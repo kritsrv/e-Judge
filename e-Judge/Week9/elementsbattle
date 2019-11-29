@@ -1,0 +1,23 @@
+""" e-Judge """
+def main():
+    """ Elements Battle """
+    defender = ["Normal", "Fire", "Water", "Grass", "Electric", "Ice", \
+    "Fighting", "Poison", "Ground", "Flying", "Psychic", "Bug", "Rock", \
+    "Ghost", "Dragon", "Dark", "Steel", "Fairy"]
+    attacker = [[defender[6]], [defender[2], defender[8], defender[12]], \
+    [defender[3], defender[4]], [defender[1], defender[5], defender[7], defender[9], defender[11]],\
+     [defender[8]], [defender[1], defender[6], defender[12], defender[16]], \
+    [defender[9], defender[10], defender[17]], [defender[8], defender[10]], \
+    [defender[2], defender[3], defender[5]], [defender[4], defender[5], defender[12]], \
+    [defender[11], defender[13], defender[15]], [defender[1], defender[9], defender[12]], \
+    [defender[2], defender[3], defender[6], defender[8], defender[16]], \
+    [defender[13], defender[15]], [defender[5], defender[14], defender[17]], \
+    [defender[6], defender[11], defender[17]], [defender[1], defender[6], defender[8]], \
+    [defender[7], defender[16]]]
+    defend = input().capitalize()
+    if defend in defender:
+        attack = attacker[defender.index(defend)]
+        print(*attack, sep='\n')
+    else:
+        print('Not Found')
+main()
