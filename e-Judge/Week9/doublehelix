@@ -1,0 +1,14 @@
+""" e-Judge """
+def main():
+    """ Double Helix """
+    size = int(input())
+    half_size = size//2
+    amount = int(input())
+    for _ in range(amount):
+        for i in range(half_size):
+            print(" " * i + "\\" + ("-" * (size-2*(i+1)) + "/"))
+        if size % 2 != 0:
+            print(" " * (half_size) + "\\")
+        for j in range(half_size, 0, -1):
+            print((' ' * (j-1)) + "/" + ("-" * (size-(2*j)) + "\\"))
+main()
