@@ -1,0 +1,13 @@
+""" e-Judge """
+def main(amount):
+    """ Card Shuffling """
+    in_hand = []
+    shuffle = 0
+    for _ in range(amount):
+        in_hand.append(int(input()))
+    for i in range(amount-1):
+        if in_hand[i] > in_hand[i+1]:
+            shuffle += (amount-1-i)
+            break
+    print(shuffle)
+main(int(input()))
