@@ -1,0 +1,10 @@
+""" e-Judge """
+def main():
+    """ Sushi Stair """
+    food = input()
+    space = 0
+    while food != 'Stop':
+        print(' ' * space + food)
+        space += len(food)
+        food = input()
+main()
