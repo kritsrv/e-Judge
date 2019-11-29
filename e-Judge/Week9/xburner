@@ -1,0 +1,17 @@
+""" e-Judge """
+def main():
+    """ X-Burner """
+    line = set()
+    hero_axis = input().split(',')
+    opp_axis = input().lower().split(',')
+    while opp_axis != ['finish']:
+        delta_x = int(opp_axis[0]) - int(hero_axis[0])
+        delta_y = int(opp_axis[1]) - int(hero_axis[1])
+        if delta_x == 0:
+            line.add('x')
+        else:
+            slope = delta_y / delta_x
+            line.add(slope)
+        opp_axis = input().lower().split(',')
+    print(len(line))
+main()
