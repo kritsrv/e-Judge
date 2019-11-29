@@ -1,0 +1,25 @@
+""" e-Judge """
+def main():
+    """ Find my sheep """
+    sheep = int(input())
+    method = input()
+    box = sheep
+    while method != 'END':
+        if method == 'A':
+            if box == 1:
+                box += 1
+            elif box == 2:
+                box -= 1
+        if method == 'B':
+            if box == 2:
+                box += 1
+            elif box == 3:
+                box -= 1
+        if method == 'C':
+            if box == 1:
+                box += 2
+            elif box == 3:
+                box -= 2
+        method = input()
+    print(box)
+main()
