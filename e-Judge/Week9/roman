@@ -1,0 +1,29 @@
+""" e-Judge """
+def main():
+    """ Roman """
+    roman = input()
+    value = 0
+    number = {'I':1, 'V': 5, 'X': 10, \
+        'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    if 'IV' in roman:
+        roman = roman.replace('IV', "")
+        value += 4
+    if 'IX' in roman:
+        roman = roman.replace('IX', "")
+        value += 9
+    if 'XL' in roman:
+        roman = roman.replace('XL', "")
+        value += 40
+    if 'XC' in roman:
+        roman = roman.replace('XC', "")
+        value += 90
+    if 'CD' in roman:
+        roman = roman.replace('CD', "")
+        value += 400
+    if 'CM' in roman:
+        roman = roman.replace('CM', "")
+        value += 900
+    for i in roman:
+        value += number[i]
+    print(value)
+main()
