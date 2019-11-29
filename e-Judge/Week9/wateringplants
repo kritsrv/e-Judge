@@ -1,0 +1,24 @@
+""" e-Judge """
+def main():
+    """ Watering Plants """
+    out_water = int(input()) # วันที่ขาดน้ำได้
+    amount = int(input()) # จำนวนต้นไม้
+    day = 0 # วันที่รอด
+    plant = []
+    for _ in range(amount):
+        plant.append(out_water)
+    while 0 not in plant:
+        water_plant = int(input())
+        plant.sort()
+        if water_plant > (amount * 5):
+            break
+        else:
+            if water_plant < amount:
+                for i in range(amount-water_plant):
+                    plant[i+water_plant] -= 1
+            else:
+                pass
+        if 0 not in plant:
+            day += 1
+    print(day)
+main()
